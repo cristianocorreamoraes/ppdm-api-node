@@ -2,7 +2,7 @@
 const express = require('express');
 
 /* IMPORTA O MODEL DE CATEGORIA */
-const livro = require('../model/Usuario');
+const usuario = require('../model/Usuario');
 
 /* CONFIGURA A FUNCIONALIDA DE ROTAS  */
 const router = express.Router();
@@ -11,7 +11,7 @@ router.get('/usuario/listarUsuario/:login/:senha', (req, res)=>{
 
     const { login, senha } = req.params;
 
-    livro.findAll({
+    usuario.findAll({
         where:{
             login,
             senha
@@ -30,7 +30,7 @@ router.post('/usuario/cadastrarUsuario', (req, res)=>{
     console.log(req.body);
     const {nome, sobrenome, email, foto, login, senha} = req.body;
 
-    livro.create({
+    usuario.create({
         nome, 
         sobrenome,
         email,

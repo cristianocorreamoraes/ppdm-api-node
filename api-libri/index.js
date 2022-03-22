@@ -9,9 +9,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-/* IMPORTA E CONFIGURA OS ARQUIVOS DE ROTAS */
+/* IMPORTA E CONFIGURA OS ARQUIVOS DE ROTAS DE USUÁRIOS */
 const usuarioController = require('./controller/UsuarioController');
 app.use('/', usuarioController);
+
+/* IMPORTA E CONFIGURA OS ARQUIVOS DE ROTAS DE LIVROS*/
+const livroController = require('./controller/LivroController');
+app.use('/', livroController);
 
 /* INSTANCIA DO SERVIDOR (express) */
 app.listen(3000, ()=>{ 
