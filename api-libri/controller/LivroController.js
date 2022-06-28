@@ -1,7 +1,7 @@
 /* IMPORTA O MÓDULO DO express */
 const express = require('express');
 
-/* IMPORTA O MODEL DE CATEGORIA */
+/* IMPORTA O MODEL DE LIVRO */
 const livro = require('../model/Livro');
 
 /* CONFIGURA A FUNCIONALIDA DE ROTAS  */
@@ -17,6 +17,25 @@ router.get('/livro/listarLivro', (req, res)=>{
         );
 
 });
+
+router.get('/livro/listarLivroId/:id', (req, res)=>{
+
+    let { id } = req.params;
+
+    console.log("ID" + id);
+
+    livro.findAll({
+        where:{
+            cod_livro: id
+        }
+    })
+            .then(
+                (livro)=>{
+                    res.status(200).json(livro);
+                }       
+        );
+
+})
 
 router.post('/livro/cadastrarLivro', (req, res)=>{
 

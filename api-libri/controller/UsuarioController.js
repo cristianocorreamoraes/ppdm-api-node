@@ -7,7 +7,7 @@ const usuario = require('../model/Usuario');
 /* CONFIGURA A FUNCIONALIDA DE ROTAS  */
 const router = express.Router();
 
-router.get('/usuario/listarUsuario/:login/:senha', (req, res)=>{
+router.get('/usuario/logarUsuario/:login/:senha', (req, res)=>{
 
     const { login, senha } = req.params;
 
@@ -27,7 +27,6 @@ router.get('/usuario/listarUsuario/:login/:senha', (req, res)=>{
 
 router.post('/usuario/cadastrarUsuario', (req, res)=>{
 
-    console.log(req.body);
     const {nome, sobrenome, email, foto, login, senha} = req.body;
 
     usuario.create({
