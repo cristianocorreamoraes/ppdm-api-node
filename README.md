@@ -9,7 +9,7 @@ Trata-se da API responsavel pela manipulação dos dados armazenados no MySQL qu
 
 É uma evolução do projeto anterior com aplicação do recurso de "retrofit".
 
-O projeto Android pode ser encontrado <https://github.com/cristianocorreamoraes/ppdm-api-retrofit">AQUI</a>.
+O projeto Android pode ser encontrado <a href="https://github.com/cristianocorreamoraes/ppdm-api-retrofit">AQUI</a>.
 
 <strong>VALE RESSALTAR AQUI QUE O PROJETO É DE CUNHO DE DIDÁTICO, ESTÁ BEM SIMPLES E AINDA PRECISA DE DIVERSAS IMPLEMENTAÇÕES</strong> 
  
